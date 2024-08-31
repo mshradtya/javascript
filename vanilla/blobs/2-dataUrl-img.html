@@ -1,0 +1,28 @@
+<!-- data url are of type string, but they can contain any kind of data, for example: images -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATA URL</title>
+  </head>
+  <body>
+    <input type="file" accept="image/png" />
+  </body>
+  <script>
+    const input = document.querySelector("input");
+
+    input.addEventListener("change", () => {
+      // creating a new file reader instance
+      const fr = new FileReader();
+      // creating a data url from the file
+      // since files are blobs we are directly using it to create the url instead of using the Blob() constructor
+      fr.readAsDataURL(input.files[0]);
+      fr.addEventListener("load", () => {
+        // waiting for file to load then printing the data url
+        console.log(fr.result);
+      });
+    });
+  </script>
+</html>

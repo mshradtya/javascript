@@ -1,0 +1,38 @@
+<!-- Unlike a data URL, an object URL does not contain the file data. Instead, it
+points to the file contents stored in browser memory. Therefore, anything that
+clears browser memory will make an object URL invalid (e.g. does not survive a
+page refresh!). -->
+
+<!-- One example of where you may want to use an object URL instead of a data URI is
+to create a client-side file download -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a><button>View Blob Contents</button></a>
+  </body>
+  <script>
+    const data = "Please download me!";
+    const myBlob = new Blob([data], { type: "text/plain" });
+    blobURL = URL.createObjectURL(myBlob);
+
+    const a = document.createElement("a");
+    a.setAttribute("href", blobURL);
+    a.setAttribute("download", "blob-test.txt");
+
+    a.style.display = "none";
+    document.body.appendChild(a);
+
+    a.click();
+
+    document.body.removeChild(a);
+    // Because a file will always exist in memory as long as an object URL exists pointing to it,
+    //  it is good practice to use revokeObjectURL() to clear it if it is no longer necessary.
+    URL.revokeObjectURL(blobURL);
+  </script>
+</html>

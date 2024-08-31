@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body data-rsssl="1">
+    <div>
+      <p>
+        The following code slices a Blob into multiple parts and new
+        reconstitutes it by placing those slices in a new Blob.
+      </p>
+      <button id="btn" name="btn" onclick="showResult()">Start slicing!</button>
+    </div>
+    <div id="output"></div>
+    <script>
+      function showResult() {
+        const obj = {
+          name: "Bateman",
+          job: "Mergers & Aquisitions",
+        };
+        const json = JSON.stringify(obj);
+        const blob = new Blob([json], { type: "application/json" });
+        // Creates Blob
+        const bytesPerBlob = 10;
+        let blobs = []; // Array to push slices to
+        for (let i = 0; i < blob.size; ) {
+          blobs.push(blob.slice(i, i + 10));
+          i = i + 10;
+        }
+        const mergedBlob = new Blob([...blobs], { type: "application/json" });
+        // Creates new Blob from slices
+        const url = URL.createObjectURL(mergedBlob);
+        // Creates object URL from new Blob
+        fetch(url)
+          .then((res) => res.json())
+          .then((res) => {
+            const output = document.getElementById("output");
+            const msg =
+              "This object below looks like the original, but has been reconstituted from sliced Blob parts!";
+            const p = document.createElement("p");
+            p.textContent = msg;
+            output.appendChild(p);
+            output.innerHTML += "<br/>" + JSON.stringify(res);
+          });
+        // Fetches JSON data from URL and write it to the page
+      }
+    </script>
+  </body>
+</html>

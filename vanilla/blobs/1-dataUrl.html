@@ -1,0 +1,33 @@
+<!-- first usecase is to use blobs is to create a data URL
+data URL doesn't link to an external resource, instead, the data IS ENCODED INSIDE THE URL ITSELF -->
+
+<!-- A useful feature of stringifying data in this way is that it can then be stored
+in localStorage or sent to a URL (another page or server) as a URL parameter. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATA URL</title>
+  </head>
+  <body></body>
+  <script>
+    const user = {
+      name: "Aditya Mishra",
+      occupation: "Full Stack Developer",
+    };
+    const json = JSON.stringify(user);
+    // create a new file reader instance
+    const fr = new FileReader();
+    // create blob of the data
+    const blob = new Blob([json], { type: "application/json" });
+    // create data url from the blob
+    fr.readAsDataURL(blob);
+    fr.addEventListener("load", () => {
+      // waits for file reading to complete
+
+      console.log(fr.result);
+    });
+  </script>
+</html>

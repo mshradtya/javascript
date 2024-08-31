@@ -1,0 +1,51 @@
+<!-- fetching file from server -->
+
+<!-- why create an object URL here instead of just using the url in image src? -->
+<!-- 1. you can use the fetch to track the download progress of the image to update a progress bar -->
+<!-- 2. another is that now you have the image in blob format, so you could do several things with it like -->
+<!-- upload to a server, read it's contents with a file reader, or access it's size property to get an estimation of it's size -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // convert URL resource to blob
+    fetch("https://picsum.photos/400/400")
+      .then((res) => res.blob())
+      .then((blob) => handler(blob));
+
+    // Change URL resource
+    function handler(blob) {
+      const url = URL.createObjectURL(blob);
+      const img = new Image();
+      img.src = url;
+      img.onload = () => {
+        document.body.appendChild(img);
+
+        // creating an edited version of the image
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+        canvas.height = img.naturalHeight;
+        canvas.width = img.naturalWidth;
+
+        ctx.filter = "sepia(1)";
+        ctx.drawImage(img, 0, 0);
+
+        canvas.toBlob((newBlob) => {
+          const newUrl = URL.createObjectURL(newBlob);
+          const newImg = new Image();
+          newImg.src = newUrl;
+          newImg.onload = () => {
+            document.body.appendChild(newImg);
+            URL.revokeObjectURL(newUrl);
+          };
+        });
+      };
+    }
+  </script>
+</html>
