@@ -41,3 +41,8 @@ some examples where hexadecimal is being used
 
 - encoders take something meaningful ===> 0101 0011 0101 ...
 - decoders take 0101 0011 0101 ... ===> something meaningful
+
+### character encodings
+
+- a system of assigning a sequence of bytes ( just zeros and onces ) to a character
+- the most common one is **utf-8**, defined by the Unicode Standard, therefore it's characters have the same numbers as Unicode
