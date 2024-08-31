@@ -54,3 +54,10 @@ some examples where hexadecimal is being used
 - buffers act like an array. so they have elements which are indexed.
 - as soon as you allocate an amount of memory, which is the buffer, it's elements are filled with 0s
 - in nodejs, each element of buffer holds 8 bits, so there will be 8 0s in an element.
+
+### alloc.Unsafe
+
+it's faster for 2 reasons
+
+1. it allocates the pre defined buffer that node uses when a process starts ( 8 kiB, Buffer.poolSize )
+2. it doesn't convert all elements to 0
