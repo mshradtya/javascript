@@ -46,3 +46,11 @@ some examples where hexadecimal is being used
 
 - a system of assigning a sequence of bytes ( just zeros and onces ) to a character
 - the most common one is **utf-8**, defined by the Unicode Standard, therefore it's characters have the same numbers as Unicode
+
+### buffers
+
+- buffers are a data structure specifically designed to work with binary data.
+- it's a container in memory. we can assign a piece of memory, for example, 4 bytes ( 32 bits ) have been allocated so the buffer size is now 4 bytes. it's fixed and cannot be changed.
+- buffers act like an array. so they have elements which are indexed.
+- as soon as you allocate an amount of memory, which is the buffer, it's elements are filled with 0s
+- in nodejs, each element of buffer holds 8 bits, so there will be 8 0s in an element.
