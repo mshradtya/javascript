@@ -25,14 +25,14 @@ just by replacing 4 bits to their hexadecimal equivalents we are able to convert
 
 some examples where hexadecimal is being used
 
-1. color codes in image editing softwares and HTML - #FFFFFF or #000000
+1. color codes in image editing softwares and HTML - `#FFFFFF` or `#000000`
 2. expressing some characters in URL like spaces - %20
 3. expressing unicode characters in HTML
 
 ### character sets / encodings
 
 - letters and symbols (characters) that a writing system uses, and a representation of assigning different numbers to those characters
-- two of the most common character sets that we use are unicode and ascii
+- two of the most common character sets that we use are Unicode and ascii
 - unicode - a standard representing and encoding characters in most of the writing systems worldwide
 - ascii - defined 128 characters, lowercase and uppercase of letters a-z, numbers from 0-9, punctuations [$,(,)] and some control characters like DEL
 - since it's a subset of unicode, it's characters have the same number as unicode

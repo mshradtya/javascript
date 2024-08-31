@@ -1,3 +1,3 @@
 - the emitter is just an object. every time we do `myE.on('foo', ()=> {})`, we're just pushing a function into this object.
-- when we emit 'foo', all the associated functions to this present in the myE object will run.
+- when we emit 'foo', all the associated functions to this present in the `myE` object will run.
 - It's all just a pattern to deal with asynchronous code better.

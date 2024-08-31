@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "b9d9085644812f4d",
+    "type": "split",
+    "children": [
+      {
+        "id": "9aff50c4f311aafd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "12d131877eb35d98",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "node/buffers/notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fcb3f5ce51243952",
+    "type": "split",
+    "children": [
+      {
+        "id": "ff0de4b8e6ead6f4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cdf30d3f68e59b71",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9ab6d18de17dfdc0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9b5a4d89f4c30b9d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "23b9005660d3dcca",
+    "type": "split",
+    "children": [
+      {
+        "id": "60bd977bceccb0a4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a95f0af26319c209",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "node/buffers/notes.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "95b319f778232068",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "node/buffers/notes.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6220087c324abbf0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2b26f715cae8988b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "node/buffers/notes.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "cdf30d3f68e59b71",
+  "lastOpenFiles": [
+    "node/file-system/copied-callback.txt",
+    "node/file-system/copied-synchronous.txt",
+    "node/file-system/copied-promise.txt",
+    "node/file-system/file.txt",
+    "node/file-system/app.js",
+    "node/event-emitter/notes.md",
+    "node/file-system/notes.md",
+    "README.md"
+  ]
+}
