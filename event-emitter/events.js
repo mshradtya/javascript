@@ -2,6 +2,7 @@
 // The code was grabbed from https://www.freecodecamp.org/news/how-to-code-your-own-event-emitter-in-node-js-a-step-by-step-guide-e13b7e7908e1/
 
 // Make sure to export the class to be able to use it in the app.js file
+
 module.exports = class EventEmitter {
   listeners = {}; // Master object
 
