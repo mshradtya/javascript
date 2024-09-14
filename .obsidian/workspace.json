@@ -148,6 +148,12 @@
   },
   "active": "cdf30d3f68e59b71",
   "lastOpenFiles": [
+    "node/streams/test.txt",
+    "node/streams/01-writeMany.js",
+    "node/streams/writeMany.js",
+    "node/streams",
+    "node/buffers/notes.md",
+    "DocketRun UI Fixes.md",
     "node/file-system/copied-callback.txt",
     "node/file-system/copied-synchronous.txt",
     "node/file-system/copied-promise.txt",
