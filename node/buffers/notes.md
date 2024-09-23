@@ -21,7 +21,7 @@
 0101 0101 0111 1101 0101 1111 0000 0001
 5 5 7 D 5 F 0 1 = 557D 5701
 
-just by replacing 4 bits to their hexadecimal equivalents we are able to convert the binary to decimal
+just by replacing 4 bits to their hexadecimal equivalents we are able to convert the binary to hexadecimal
 
 some examples where hexadecimal is being used
 
