@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // can be assigned to variables
+      var newFunction = function () {};
+
+      // can be passed as arguments to other functions
+      function childFunction() {
+        console.log("hello world");
+      }
+
+      function parentFunction(child) {
+        child();
+      }
+
+      parentFunction(childFunction);
+
+      // can be assigned as properties to other objects
+      var newObject = {};
+
+      newObject.helloFunc = function () {};
+
+      // can be returned from other function
+      function returnsFunction() {
+        return function wow() {
+          console.log("wow");
+        };
+      }
+
+      var wow = returnsFunction();
+      wow();
+
+      // can have dynamic properties attached to them
+      function helloWorld() {}
+      helloWorld.bye = "bye world";
+    </script>
+  </body>
+</html>

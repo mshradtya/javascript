@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A simple callback example</title>
+  </head>
+  <body>
+    <script>
+      function useless(func) {
+        func();
+        return true;
+      }
+
+      function sayHello() {
+        console.log("hello world");
+      }
+
+      var result = useless(sayHello);
+      console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Storing a collection of unique functions - inefficient method</title>
+  </head>
+  <body>
+    <script>
+      store = {
+        cache: [],
+        add: function func(fn) {
+          if (this.cache.length) {
+            this.cache.map((func) => {
+              if (func === fn) return false;
+              this.cache.push(fn);
+              return true;
+            });
+          } else {
+            this.cache.push(fn);
+            return true;
+          }
+        },
+      };
+
+      function exampleFunc() {
+        console.log("im example func");
+      }
+      function wowFunc() {
+        console.log("im wow func");
+      }
+
+      store.add(exampleFunc);
+      store.add(exampleFunc);
+      store.add(wowFunc);
+      console.log(store);
+
+      store.cache.map((fn) => fn());
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Storing a collection of unique functions - efficient method</title>
+  </head>
+  <body>
+    <script>
+      store = {
+        nextId: 1,
+        cache: [],
+        add: function func(fn) {
+          if (!fn.id) {
+            fn.id = this.nextId++;
+            this.cache.push(fn);
+            return true;
+          }
+        },
+      };
+
+      function exampleFunc() {
+        console.log("im example func");
+      }
+      function wowFunc() {
+        console.log("im wow func");
+      }
+
+      store.add(exampleFunc);
+      store.add(exampleFunc);
+      store.add(wowFunc);
+      console.log(store);
+
+      store.cache.map((fn) => fn());
+    </script>
+  </body>
+</html>
