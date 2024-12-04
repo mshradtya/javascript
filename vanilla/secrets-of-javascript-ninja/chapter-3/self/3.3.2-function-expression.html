@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Function Expression</title>
+  </head>
+  <body>
+    <script>
+      var newFunc = function () {}; // assigning to a variable
+
+      newFunc(function () {}); // passing it as params directly
+
+      var multiplied = (function () {
+        return function (num) {
+          return num * 2;
+        };
+      })()(3); // immediately invoked
+
+      var val = +(function () {
+        return "4";
+      })(); // as argument to unary operator
+
+      var arrow = () => "hello world"; // arrow function
+      console.log(multiplied, val, arrow());
+    </script>
+  </body>
+</html>
