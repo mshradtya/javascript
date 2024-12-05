@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>using a constructor to setup common objects</title>
+  </head>
+  <body>
+    <script>
+      function Ninja() {
+        this.skulk = function () {
+          return this;
+        };
+      }
+
+      var ninja1 = new Ninja();
+      var ninja2 = new Ninja();
+
+      console.log(ninja1, ninja2);
+      console.log(ninja1.skulk() === ninja1, ninja2.skulk() === ninja2);
+    </script>
+  </body>
+</html>

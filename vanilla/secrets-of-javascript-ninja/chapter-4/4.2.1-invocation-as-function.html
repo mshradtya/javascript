@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>invocation as a function</title>
+  </head>
+  <body>
+    <script>
+      // non-strict mode
+      function f() {
+        return this; // Window object - the global context
+      }
+
+      // strict mode
+      function strictF() {
+        "use strict";
+        return this; // undefined
+      }
+
+      console.log(f(), strictF());
+    </script>
+  </body>
+</html>

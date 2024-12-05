@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>differences between function and method invocation</title>
+  </head>
+  <body>
+    <script>
+      function getMyContext() {
+        return this;
+      }
+
+      var myObject = {
+        getMyThis: getMyContext,
+      };
+
+      console.log(getMyContext(), myObject.getMyThis());
+    </script>
+  </body>
+</html>
