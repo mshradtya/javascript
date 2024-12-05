@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>arguments aliases the function parameters</title>
+  </head>
+  <body>
+    <script>
+      function sum(a, b, c) {
+        arguments[0] = 10;
+        arguments[1] = 20;
+        arguments[2] = 30;
+        return a + b + c;
+      }
+
+      const result = sum(1, 2, 3); // expected 6, got 60
+      console.log(result);
+
+      // two way
+      function sumAgain(a, b, c) {
+        a = 1;
+        b = 2;
+        c = 3;
+        return arguments[0] + arguments[1] + arguments[2];
+      }
+
+      const resultAgain = sumAgain(10, 20, 30); // expected 60, got 6
+      console.log(resultAgain);
+    </script>
+  </body>
+</html>
