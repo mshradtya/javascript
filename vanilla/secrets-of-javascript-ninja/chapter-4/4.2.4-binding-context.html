@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>binding a specific context to a function</title>
+  </head>
+  <body>
+    <button id="test">Click Me!</button>
+    <script>
+      function Button() {
+        this.clicked = false;
+        this.click = function () {
+          this.clicked = true;
+          console.log(button.clicked); // expected true, got false
+          console.log(elem.clicked); // expected undefined, got true
+        };
+      }
+      var button = new Button();
+      var elem = document.getElementById("test");
+      elem.addEventListener("click", button.click);
+
+      // the above can be fixed using an arrow function
+      function Button2() {
+        this.clicked = false;
+        this.click = () => {
+          this.clicked = true;
+          console.log(button.clicked); // expected true, got true
+        };
+      }
+      var button2 = new Button2();
+      var elem2 = document.getElementById("test");
+      elem2.addEventListener("click", button.click);
+    </script>
+  </body>
+</html>
