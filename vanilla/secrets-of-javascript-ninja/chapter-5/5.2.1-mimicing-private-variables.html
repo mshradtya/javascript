@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Using closures to approximate private variables</title>
+  </head>
+  <body>
+    <script>
+      function Increment() {
+        var num = 0;
+        this.getNum = function () {
+          return num;
+        };
+        this.increment = function () {
+          num++;
+        };
+      }
+
+      var inc1 = new Increment();
+      inc1.increment();
+      console.log(inc1.num, inc1.getNum()); // undefined, 1
+    </script>
+  </body>
+</html>
