@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The behavior of const variables</title>
+  </head>
+  <body>
+    <script>
+      const OGSamurai = "Johnny Silverhand";
+      try {
+        OGSamurai = "V";
+      } catch (e) {
+        console.log("V can't be the OG samurai");
+      }
+
+      const samurai = {};
+      samurai.member1 = "V"; // can't assign a completely new object, but can always update the existing
+      console.log(samurai);
+
+      const chooms = ["V"];
+      chooms.push("Jackie"); // can't assign a completely new array, but can always update the existing
+      console.log(chooms);
+    </script>
+  </body>
+</html>

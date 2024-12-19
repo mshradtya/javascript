@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Using the var keyword</title>
+  </head>
+  <body>
+    <script>
+      function incrementer() {
+        for (var i = 0; i < 3; i++) {
+          console.log(i);
+        }
+        console.log("outside the loop", i); // able to access value defined in block, outside the block
+      }
+      incrementer();
+    </script>
+  </body>
+</html>

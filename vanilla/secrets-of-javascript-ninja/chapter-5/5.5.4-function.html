@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Accessing a function before it's declaration</title>
+  </head>
+  <body>
+    <script>
+      console.log(typeof fun); // able to access function declaration before it's defined
+      console.log(typeof fun2); // unable to do the same for function expression
+      console.log(typeof fun3); // unable to do the same for arrow function
+
+      function fun() {}
+      const fun2 = function () {};
+      const fun3 = () => {};
+    </script>
+  </body>
+</html>

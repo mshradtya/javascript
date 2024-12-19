@@ -34,7 +34,7 @@
               "type": "markdown",
               "state": {
                 "file": "vanilla/secrets-of-javascript-ninja/chapter-5/notes.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -160,10 +160,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "vanilla/secrets-of-javascript-ninja/document.pdf"
+                "file": "vanilla/secrets-of-javascript-ninja/chapter-5/notes.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of document"
+              "title": "Outline of notes"
             }
           }
         ],
@@ -184,23 +184,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "12d131877eb35d98",
+  "active": "c8647ed8f7ed2b21",
   "lastOpenFiles": [
-    "vanilla/secrets-of-javascript-ninja/chapter-5/notes.md",
     "vanilla/secrets-of-javascript-ninja/document.pdf",
+    "vanilla/secrets-of-javascript-ninja/chapter-5/notes.md",
     "vanilla/secrets-of-javascript-ninja/chapter-5/test.html",
+    "vanilla/secrets-of-javascript-ninja/chapter-5/5.5.5-overriding-fun-identifiers.html",
+    "Pasted image 20241219111336.png",
+    "vanilla/secrets-of-javascript-ninja/chapter-5/5.5.4-function.html",
+    "vanilla/secrets-of-javascript-ninja/chapter-5/5.5.3-let-const.html",
+    "vanilla/secrets-of-javascript-ninja/chapter-5/5.5.2-var.html",
+    "vanilla/secrets-of-javascript-ninja/chapter-5/5.5.1-const.html",
     "vanilla/secrets-of-javascript-ninja/chapter-4/notes.md",
     "vanilla/secrets-of-javascript-ninja/chapter-3/notes.md",
     "node/streams/test.txt",
     "node/streams/01-writeMany.js",
     "node/streams/writeMany.js",
-    "node/streams",
     "node/buffers/notes.md",
     "DocketRun UI Fixes.md",
-    "node/file-system/copied-callback.txt",
-    "node/file-system/copied-synchronous.txt",
-    "node/file-system/copied-promise.txt",
-    "node/file-system/file.txt",
     "node/event-emitter/notes.md",
     "node/file-system/notes.md",
     "README.md"

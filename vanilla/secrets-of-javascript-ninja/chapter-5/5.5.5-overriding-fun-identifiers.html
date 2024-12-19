@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Accessing a function before it's declaration</title>
+  </head>
+  <body>
+    <script>
+      console.log(typeof fun); // function
+      var fun = 3;
+      console.log(typeof fun); // number
+      function fun() {}
+      console.log(typeof fun); // still a number
+    </script>
+  </body>
+</html>
