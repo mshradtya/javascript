@@ -32,6 +32,7 @@
 - lexical environment & `[[Environment]]` are not the same, rather `[[Environment]]` is part of a lexical environment
 - lexical environment may change with each function call, but it's `[[Environment]]` remains constant as it depends on where it was defined, rather than called.
 
+![[Pasted image 20250101203944.png]]
 ### 5.5 Understanding types of JavaScript variables
 
 - `var`, `let` & `const` - they differ in two aspects - _mutability_ and their relationship toward lexical environment

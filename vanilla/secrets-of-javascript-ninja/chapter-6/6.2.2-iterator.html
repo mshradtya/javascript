@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Controlling a generator through a iterator object</title>
+  </head>
+  <body>
+    <script>
+      function* WeaponGenerator() {
+        yield "Katana";
+        yield "Wakizashi";
+      }
+      const weaponsIterator = WeaponGenerator();
+      const result1 = weaponsIterator.next();
+      console.log(
+        typeof result1 === "object" &&
+          result1.value === "Katana" &&
+          !result1.done
+      ); // true
+
+      const result2 = weaponsIterator.next();
+      console.log(
+        typeof result2 === "object" &&
+          result2.value === "Wakizashi" &&
+          !result2.done
+      ); // true
+
+      const result3 = weaponsIterator.next();
+      console.log(
+        typeof result3 === "object" &&
+          result3.value === undefined &&
+          result3.done
+      ); // true
+    </script>
+  </body>
+</html>

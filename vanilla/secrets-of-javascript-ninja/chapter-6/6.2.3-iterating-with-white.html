@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Iterating over generator results with a while loop</title>
+  </head>
+  <body>
+    <script>
+      function* WeaponGenerator() {
+        yield "Katana";
+        yield "Wakiazshi";
+      }
+
+      const weaponsIterator = WeaponGenerator();
+      let item;
+      while (!(item = weaponsIterator.next()).done) {
+        console.log(item.value);
+      } // for-of loop was just a syntactic sugar for doing the same
+    </script>
+  </body>
+</html>

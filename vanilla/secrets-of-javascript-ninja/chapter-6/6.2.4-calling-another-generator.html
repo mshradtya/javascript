@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Using yield* to delegate to another generator</title>
+  </head>
+  <body>
+    <script>
+      function* WarriorGenerator() {
+        yield "Sun Tzu";
+        yield* NinjaGenerator();
+        yield "Genghis Khan";
+      }
+
+      function* NinjaGenerator() {
+        yield "Hattori";
+        yield "Yoshi";
+      }
+
+      for (let warrior of WarriorGenerator()) {
+        console.log(warrior);
+      }
+    </script>
+  </body>
+</html>
