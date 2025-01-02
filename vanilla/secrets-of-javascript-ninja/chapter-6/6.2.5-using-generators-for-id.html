@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Using generators for generating Ids</title>
+  </head>
+  <body>
+    <script>
+      function* IdGenerator() {
+        let id = 0;
+        while (true) {
+          yield ++id;
+        }
+      }
+
+      const IdIterator = IdGenerator();
+
+      const ninja1 = { id: IdIterator.next().value };
+      const ninja2 = { id: IdIterator.next().value };
+      const ninja3 = { id: IdIterator.next().value };
+
+      console.log(ninja1, ninja2, ninja3);
+    </script>
+  </body>
+</html>

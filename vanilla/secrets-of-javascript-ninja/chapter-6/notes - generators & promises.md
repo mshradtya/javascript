@@ -21,3 +21,8 @@
 
 - we can delegate to another generator within a generator by using the _yield*_
 
+- using generators:
+	-  to generate unique IDs
+	- traverse the DOM
+
+- 

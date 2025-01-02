@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Iterating over a DOM tree with generators</title>
+  </head>
+  <body>
+    <div id="subTree">
+      <form><input type="text" /></form>
+      <p>Paragraph</p>
+      <span>Span</span>
+    </div>
+    <script>
+      function* DomTraversal(element) {
+        yield element;
+        element = element.firstElementChild;
+        while (element) {
+          yield* DomTraversal(element);
+          element = element.nextElementSibling;
+        }
+      }
+      const subTree = document.getElementById("subTree");
+      for (let element of DomTraversal(subTree)) {
+        console.log(element.nodeName);
+      }
+    </script>
+  </body>
+</html>
