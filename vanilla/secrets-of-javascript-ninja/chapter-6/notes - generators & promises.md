@@ -25,4 +25,8 @@
 	-  to generate unique IDs
 	- traverse the DOM
 
-- 
+- we can send data when first invoking a generator 
+- we can also send data _into_ the generator by passing arguments to the _next_ method
+- the passed in value is used by the generator as the value of the whole _yield_ expression, in which the generator was currently suspended
+- another way to send data to a generator is by throwing an exception to it.
+

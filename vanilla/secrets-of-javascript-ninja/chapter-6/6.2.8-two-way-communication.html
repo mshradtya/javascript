@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sending data to and receiving data from a generator</title>
+  </head>
+  <body>
+    <script>
+      function* NinjaGenerator(action) {
+        const imposter = yield "Hattori " + action;
+        console.log(imposter === "Hanzo"); // true
+        yield "Yoshi (" + imposter + ") " + action;
+      }
+      const ninjaIterator = NinjaGenerator("skulk");
+      const result1 = ninjaIterator.next();
+      console.log(result1.value === "Hattori skulk"); // true
+      const result2 = ninjaIterator.next("Hanzo");
+      console.log(result2.value === "Yoshi (Hanzo) skulk"); // true
+    </script>
+  </body>
+</html>
