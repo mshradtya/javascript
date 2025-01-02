@@ -9,7 +9,7 @@
 		- event loop sends async code to worker / child threads
 		- once async code is executed, it's callback function is placed in **callback queue**
 		- The **event loop** checks if the **call stack** is empty. If the stack is empty, it takes the first callback from the **callback queue** and pushes it onto the **call stack** for execution.
-	- nonblocking async code with generators & promises
+	- nonblocking async code with generators & promises = `async` & `await`
 ### 6.2 Working with generator functions
 
 - a generator is a special type of function
@@ -30,3 +30,22 @@
 - the passed in value is used by the generator as the value of the whole _yield_ expression, in which the generator was currently suspended
 - another way to send data to a generator is by throwing an exception to it.
 
+- generators are a side effect of the fact that a generator’s execution context is kept alive if we yield from a generator, and not destroyed as is the case with return values and standard functions.
+
+### 6.3 Working with promises
+
+- created using the built-in `Promise()` constructor, to which we pass a function - called the _executor_ function.
+- the executor has two parameters - _resolve_ & _reject_. the executor is called immediately when constructing the Promise object.
+- _resolve_ - which we call manually if we want the promise to resolve successfully, and _reject_, which we call if an error occurs.
+
+#### understanding problems with simple callbacks
+
+1. difficult error handling
+	- because we cannot use `try-catch` with the callbacks
+2. performing sequence of steps is tricky
+	- it leads to callback hell / pyramid of doom
+3. performing a number of steps in parallel is also tricky
+
+#### diving into promises
+
+Promises are designed to deal with asynchronous actions, so the JavaScript engine always resorts to asynchronous handling, to make the promise behavior predictable. The engine does this by executing the then callbacks after all the code in the current step of the event loop is executed

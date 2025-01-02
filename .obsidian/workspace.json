@@ -34,7 +34,7 @@
               "type": "markdown",
               "state": {
                 "file": "vanilla/secrets-of-javascript-ninja/chapter-6/notes - generators & promises.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -184,10 +184,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3f91db53f0139ac1",
+  "active": "b52d7dc62897fed1",
   "lastOpenFiles": [
-    "vanilla/secrets-of-javascript-ninja/document.pdf",
+    "vanilla/secrets-of-javascript-ninja/chapter-6/6.3.2-promise-execution.html",
     "vanilla/secrets-of-javascript-ninja/chapter-6/notes - generators & promises.md",
+    "vanilla/secrets-of-javascript-ninja/document.pdf",
+    "vanilla/secrets-of-javascript-ninja/chapter-6/6.3.1-simple-promise.html",
     "vanilla/secrets-of-javascript-ninja/chapter-6/6.2.9-throwing-exceptions.html",
     "vanilla/secrets-of-javascript-ninja/chapter-6/6.2.8-two-way-communication.html",
     "vanilla/secrets-of-javascript-ninja/chapter-6/6.2.7-dom-traversal-generator.html",
@@ -201,7 +203,6 @@
     "Pasted image 20241219111336.png",
     "vanilla/secrets-of-javascript-ninja/chapter-4/notes.md",
     "test.js",
-    "vanilla/secrets-of-javascript-ninja/chapter-6/6.2.2-iterator.html",
     "vanilla/secrets-of-javascript-ninja/chapter-3/notes.md",
     "node/buffers/notes.md",
     "DocketRun UI Fixes.md",

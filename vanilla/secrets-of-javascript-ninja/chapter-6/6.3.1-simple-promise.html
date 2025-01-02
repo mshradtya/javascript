@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Creating a simple promise</title>
+  </head>
+  <body>
+    <script>
+      const ninjaPromise = new Promise((resolve, reject) => {
+        resolve("Hattori");
+        // reject('An error resolving a promise!')
+      });
+
+      ninjaPromise.then(
+        (ninja) => {
+          console.log(ninja === "Hattori"); // true
+        },
+        (err) => {
+          console.log("there shouldn't be an error");
+        }
+      );
+    </script>
+  </body>
+</html>

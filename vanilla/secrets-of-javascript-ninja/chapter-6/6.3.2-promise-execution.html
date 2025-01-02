@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Creating a simple promise</title>
+  </head>
+  <body>
+    <script>
+      console.log("At code start");
+      var ninjaDelayedPromise = new Promise((resolve, reject) => {
+        console.log("ninjaDelayedPromise executor");
+        setTimeout(() => {
+          console.log("Resolving ninjaDelayedPromise");
+          resolve("Hattori");
+        }, 500);
+      });
+      console.log(
+        ninjaDelayedPromise !== null,
+        "After creating ninjaDelayedPromise"
+      );
+      ninjaDelayedPromise.then((ninja) => {
+        console.log(
+          ninja === "Hattori",
+          "ninjaDelayedPromise resolve handled with Hattori"
+        );
+      });
+      const ninjaImmediatePromise = new Promise((resolve, reject) => {
+        console.log("ninjaImmediatePromise executor. Immediate resolve.");
+        resolve("Yoshi");
+      });
+      ninjaImmediatePromise.then((ninja) => {
+        console.log(
+          ninja === "Yoshi",
+          "ninjaImmediatePromise resolve handled with Yoshi"
+        );
+      });
+      console.log("At code end");
+    </script>
+  </body>
+</html>
