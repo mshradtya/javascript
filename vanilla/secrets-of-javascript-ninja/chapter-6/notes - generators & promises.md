@@ -49,3 +49,9 @@
 #### diving into promises
 
 Promises are designed to deal with asynchronous actions, so the JavaScript engine always resorts to asynchronous handling, to make the promise behavior predictable. The engine does this by executing the then callbacks after all the code in the current step of the event loop is executed
+
+#### rejecting a promise
+
+1. explicitly - using the `reject` method - when doing so, the second callback of `then()` will be invoked
+2. alternative - by chaining the _catch()_ 
+3. implicit - if an exception occurs, promise is rejected implicitly
