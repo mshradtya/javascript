@@ -6,7 +6,7 @@
       {
         "id": "b885547fab1ba7dd",
         "type": "tabs",
-        "dimension": 64.00804289544236,
+        "dimension": 70.24128686327077,
         "children": [
           {
             "id": "b52d7dc62897fed1",
@@ -23,22 +23,22 @@
         ]
       },
       {
-        "id": "46a7f997ca7c9a57",
+        "id": "e273fd411bf2ad14",
         "type": "tabs",
-        "dimension": 35.99195710455764,
+        "dimension": 29.75871313672922,
         "children": [
           {
-            "id": "3f91db53f0139ac1",
+            "id": "faf18a02f4e6d849",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vanilla/secrets-of-javascript-ninja/chapter-6/notes - generators & promises.md",
+                "file": "vanilla/secrets-of-javascript-ninja/chapter-7/notes - object orientation with prototypes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "notes - generators & promises"
+              "title": "notes - object orientation with prototypes"
             }
           }
         ]
@@ -184,25 +184,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b52d7dc62897fed1",
+  "active": "faf18a02f4e6d849",
   "lastOpenFiles": [
-    "vanilla/secrets-of-javascript-ninja/chapter-6/notes - generators & promises.md",
     "vanilla/secrets-of-javascript-ninja/document.pdf",
+    "vanilla/secrets-of-javascript-ninja/chapter-7/notes - object orientation with prototypes.md",
+    "vanilla/secrets-of-javascript-ninja/chapter-7/7.4-prototypes-runtime.html",
+    "vanilla/secrets-of-javascript-ninja/chapter-7/7.4-prototypes-runtime.hmtl",
+    "vanilla/secrets-of-javascript-ninja/chapter-7/7.3-instance-properties.html",
+    "vanilla/secrets-of-javascript-ninja/chapter-7/7.2-creating-object.html",
+    "vanilla/secrets-of-javascript-ninja/chapter-7/7.1-prototyping.html",
+    "vanilla/secrets-of-javascript-ninja/chapter-7",
+    "vanilla/secrets-of-javascript-ninja/chapter-3/notes.md",
+    "vanilla/secrets-of-javascript-ninja/chapter-6/notes - generators & promises.md",
     "vanilla/secrets-of-javascript-ninja/chapter-6/6.3.5-implicit-promise-rejection.html",
     "vanilla/secrets-of-javascript-ninja/chapter-6/6.3.4-promise-rejection-catch.html",
     "vanilla/secrets-of-javascript-ninja/chapter-6/6.3.3-explicit-promise-rejection.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-6/6.3.2-promise-execution.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-6/6.3.1-simple-promise.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-6/6.2.9-throwing-exceptions.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-6/6.2.8-two-way-communication.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-6/6.2.7-dom-traversal-generator.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-6/6.2.6-dom-traversal.html",
     "vanilla/secrets-of-javascript-ninja/chapter-5/notes.md",
     "Pasted image 20250101203944.png",
     "Pasted image 20250101203851.png",
     "Pasted image 20241219111336.png",
     "vanilla/secrets-of-javascript-ninja/chapter-4/notes.md",
-    "vanilla/secrets-of-javascript-ninja/chapter-3/notes.md",
     "node/buffers/notes.md",
     "DocketRun UI Fixes.md",
     "node/event-emitter/notes.md",

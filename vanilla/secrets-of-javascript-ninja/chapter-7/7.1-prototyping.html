@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      With prototypes, objects can access properties of other objects
+    </title>
+  </head>
+  <body>
+    <script>
+      const yoshi = { skulk: true };
+      const hattori = { sneak: true };
+      const kuma = { creep: true };
+
+      console.log("skulk" in yoshi); // true - there is skulk in yoshi
+      console.log(!("sneak" in yoshi)); // true - no sneak in yoshi
+      console.log(!("creep" in yoshi)); // true - no creep in yoshi
+
+      Object.setPrototypeOf(yoshi, hattori);
+      console.log("sneak" in yoshi); // true - yoshi now has access to sneak
+      console.log(!("creep" in hattori)); // true - no creep in hattori
+
+      Object.setPrototypeOf(hattori, kuma);
+      console.log("creep" in hattori); // true - now hattori can creep
+      console.log("creep" in yoshi); // true - now yoshi can also creep, as a result of prototype chaining
+    </script>
+  </body>
+</html>

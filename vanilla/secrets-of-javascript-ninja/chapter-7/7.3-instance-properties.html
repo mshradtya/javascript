@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Observing the precedence of initialization activities</title>
+  </head>
+  <body>
+    <script>
+      function Ninja() {
+        this.swung = false;
+        // instance method named swingSword
+        this.swingSword = function () {
+          return !this.swung;
+        };
+      }
+      // prototype method named swingSword
+      Ninja.prototype.swingSword = function () {
+        return this.swung;
+      };
+      const ninja = new Ninja();
+      console.log(ninja.swingSword()); // true - calls the instance method not the prototype method
+    </script>
+  </body>
+</html>

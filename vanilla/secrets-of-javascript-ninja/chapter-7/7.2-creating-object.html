@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Creating a new instance with a prototyped method</title>
+  </head>
+  <body>
+    <script>
+      // constructor function
+      // defines a function that does nothing and returns nothing
+      function Ninja() {}
+      // assigning something to the prototype object of this function
+      Ninja.prototype.swingSword = function () {
+        return true;
+      };
+
+      const ninja1 = Ninja(); // invoking as normal function
+      console.log(ninja1 === undefined); // true, as it does nothing and returns nothing
+
+      const ninja2 = new Ninja(); // invoking as a constructor function
+      // every function has a prototype object, that's automatically set as the prototype of the objects created with that function
+      console.log(ninja2 && ninja2.swingSword && ninja2.swingSword()); // true, swingSword exists and is callable
+    </script>
+  </body>
+</html>

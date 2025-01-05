@@ -1,19 +1,24 @@
 ## 3: First-class functions for the novice: definitions and arguments
 
-- functional language
-- first class object / citizens
+- JavaScript is a functional language
+- functions in JS are first class object / citizens
+	- can be assigned to variables
+	- can be assigned to variables
+	- can be assigned as properties to other objects
+	- can be returned from other function
+	- can have dynamic properties attached to them
 
 ### 3. 1. What's with the functional difference?
 
 #### 3.1.1 Functions as first-class objects
 
-- objects but _invokable_
+- functions are basically objects but _invokable_
 
 #### 3.1.2 Callback functions
 
 examples:
 
-1. useless function calling another function
+1. function calling another function
 2. sort() which takes a callback
 
 ### 3.2 Fun with functions as objects
@@ -23,10 +28,10 @@ examples:
 1. storing unique functions in a store
    - inefficient way
    - efficient way
-1. memoization
+2. memoization
    - example: function to check if prime or not
-   - caching - memory vs performace
-   - difficulty measuring performace
+   - caching - memory vs performance
+   - difficulty measuring performance
 
 ### 3.3 Defining functions
 

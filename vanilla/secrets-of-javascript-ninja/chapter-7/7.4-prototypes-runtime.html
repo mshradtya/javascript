@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>With prototypes, everything can be changed at runtime</title>
+  </head>
+  <body>
+    <script>
+      function Ninja() {
+        this.swung = true;
+      }
+      const ninja1 = new Ninja();
+
+      // adds a method to the prototype, after the object has been created
+      Ninja.prototype.swingSword = function () {
+        return this.swung;
+      };
+
+      console.log(ninja1.swingSword()); // true - shows that method exists in that object,
+      // even though prototype was updated after the object was created
+
+      // completely replacing the old prototype object
+      // hoping that now ninja1 will not be able to access swingSword()
+      Ninja.prototype = {
+        pierce: function () {
+          return true;
+        },
+      };
+
+      console.log(ninja1.swingSword()); // true - but it can still access it, because it keeps reference to old Ninja prototype
+
+      const ninja2 = new Ninja();
+      console.log(ninja2.pierce()); // true - newly created object refers to the new Prototype object
+      console.log(!ninja2.swingSword); // true - newly created object has no access to previous prototype object
+    </script>
+  </body>
+</html>
