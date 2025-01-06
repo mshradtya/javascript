@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Achieving inheritance with prototypes</title>
+  </head>
+  <body>
+    <script>
+      function Person() {}
+      Person.prototype.dance = function () {};
+
+      function Ninja() {}
+      Ninja.prototype = new Person(); // assigning person object to Ninja prototype
+
+      const ninja = new Ninja();
+      console.log(ninja instanceof Ninja); // true - because ninja is a Ninja
+      console.log(ninja instanceof Person); // true - because now prototype of Ninja is an instance of Person
+      console.log(ninja instanceof Object); // true - because
+      console.log(typeof ninja.dance === "function"); // true - now ninja can access the dance method
+
+      // When we try to access the dance method through the ninja object,
+      // the JavaScript runtime will first check the ninja object itself.
+      // Because it doesn’t have the dance property, its prototype,
+      // the person object, is searched. The person object also doesn’t have the dance property,
+      // so its prototype is searched, and the property is finally found. This is how to achieve inheritance in JavaScript!
+    </script>
+  </body>
+</html>

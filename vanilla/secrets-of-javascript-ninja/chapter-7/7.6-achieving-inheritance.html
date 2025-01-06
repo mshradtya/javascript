@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Trying to achieve inheritance with prototypes</title>
+  </head>
+  <body>
+    <script>
+      function Person() {}
+      Person.prototype.dance = function () {};
+
+      function Ninja() {}
+      Ninja.prototype = { dance: Person.prototype.dance };
+
+      const ninja = new Ninja();
+      console.log(ninja instanceof Ninja); // true - because ninja is a Ninja
+      console.log(ninja.constructor === Ninja); // false - because we replaced the original prototype object that contained constructor
+      console.log(ninja instanceof Person); // false - because we only copied one property from the Person prototype
+      // one way is to copy each property of Person to Ninja's prototype ( including constructor ),
+      Ninja.prototype = Person.prototype;
+      const ninja2 = new Ninja();
+      console.log(ninja2 instanceof Person); // true - but that's not how inheritance works
+      // we should be aiming to create a prototype chain
+    </script>
+  </body>
+</html>

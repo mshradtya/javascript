@@ -10,6 +10,7 @@ A prototype is an object to which the search for a particular property can be de
 ### Object construction and prototypes
 
 - every function has a prototype object, that's automatically set as the prototype of the objects created with that function
+- The prototype object initially has only one property, `constructor`, that references back to the function
 - The `swingSword` method is a property of the Ninja’s prototype, and not a property of ninja instances
 
 #### Instance properties
@@ -26,3 +27,19 @@ A prototype is an object to which the search for a particular property can be de
 
 #### Object typing via constructors
 
+- we can find the type of the object using it's constructor property, which comes from the constructor function's prototype.
+
+### Achieving Inheritance
+
+- _Inheritance_ is a form of reuse in which new objects have access to properties of existing objects.
+- the best technique for creating a prototype chain is to use an instance of an object as the other object's prototype. listing 7.7.
+
+#### The problem of overriding the constructor property
+
+- using instance of parent object as value for child object's prototype removes the _constructor_ property that was in child object's prototype by default
+- as a result, we cannot use the child's constructor to determine which function created it, as the result will always lead to parent function.
+
+"if we search the ninja object for the constructor property, we won’t find it. So we go over to its prototype, which also doesn’t have a constructor property, and again, we follow the prototype and end up in the prototype object of Person, which has a constructor property referencing the Person function. In effect, we get the wrong answer: If we ask the ninja object which function has constructed it, we’ll get Person as the answer."
+
+##### configuring object properties
+ 

@@ -17,6 +17,7 @@
 
       console.log(ninja1.swingSword()); // true - shows that method exists in that object,
       // even though prototype was updated after the object was created
+      // this is because ninja1 is referencing the Ninja's prototype
 
       // completely replacing the old prototype object
       // hoping that now ninja1 will not be able to access swingSword()

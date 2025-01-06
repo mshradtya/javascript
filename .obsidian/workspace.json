@@ -34,7 +34,7 @@
               "type": "markdown",
               "state": {
                 "file": "vanilla/secrets-of-javascript-ninja/chapter-7/notes - object orientation with prototypes.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -184,10 +184,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "faf18a02f4e6d849",
+  "active": "b52d7dc62897fed1",
   "lastOpenFiles": [
-    "vanilla/secrets-of-javascript-ninja/document.pdf",
     "vanilla/secrets-of-javascript-ninja/chapter-7/notes - object orientation with prototypes.md",
+    "vanilla/secrets-of-javascript-ninja/document.pdf",
+    "vanilla/secrets-of-javascript-ninja/chapter-7/7.7-prototype-chain.html",
+    "vanilla/secrets-of-javascript-ninja/chapter-7/7.6-achieving-inheritance.html",
+    "vanilla/secrets-of-javascript-ninja/chapter-7/7.5-type-checking.html",
     "vanilla/secrets-of-javascript-ninja/chapter-7/7.4-prototypes-runtime.html",
     "vanilla/secrets-of-javascript-ninja/chapter-7/7.4-prototypes-runtime.hmtl",
     "vanilla/secrets-of-javascript-ninja/chapter-7/7.3-instance-properties.html",
@@ -196,9 +199,6 @@
     "vanilla/secrets-of-javascript-ninja/chapter-7",
     "vanilla/secrets-of-javascript-ninja/chapter-3/notes.md",
     "vanilla/secrets-of-javascript-ninja/chapter-6/notes - generators & promises.md",
-    "vanilla/secrets-of-javascript-ninja/chapter-6/6.3.5-implicit-promise-rejection.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-6/6.3.4-promise-rejection-catch.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-6/6.3.3-explicit-promise-rejection.html",
     "vanilla/secrets-of-javascript-ninja/chapter-5/notes.md",
     "Pasted image 20250101203944.png",
     "Pasted image 20250101203851.png",

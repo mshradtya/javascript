@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Examining the type of an instance and its constructor</title>
+  </head>
+  <body>
+    <script>
+      function Ninja() {}
+      const ninja = new Ninja();
+
+      console.log(typeof ninja === "object"); // true - the type of instance is object
+      console.log(ninja instanceof Ninja); // true - instanceof identifies the constructor
+      console.log(ninja.constructor === Ninja); // true - the ninja object was created by the ninja function
+
+      // since ninja.constructor is just referencing to the original Ninja(), we can create new objects using it
+      const ninja2 = new ninja.constructor();
+      console.log(ninja2 instanceof Ninja); // true
+    </script>
+  </body>
+</html>
