@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Watch out for changes in constructor prototype</title>
+  </head>
+  <body>
+    <script>
+      function Ninja() {}
+      const ninja = new Ninja();
+      console.log(ninja instanceof Ninja); // true
+      Ninja.prototype = {};
+      console.log(ninja instanceof Ninja); // false
+    </script>
+  </body>
+</html>

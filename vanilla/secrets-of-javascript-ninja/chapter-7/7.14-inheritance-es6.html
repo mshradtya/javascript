@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Inheritance in ES6</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name) {
+          this.name = name;
+        }
+        dance() {
+          return true;
+        }
+      }
+
+      class Ninja extends Person {
+        constructor(name, weapon) {
+          super(name); // calling the constructor of the parent class
+          // this ensures that the Person class initializes its name property when a Ninja instance is created
+          this.weapon = weapon;
+        }
+
+        wieldWeapon() {
+          return true;
+        }
+      }
+
+      var person = new Person("Bob");
+
+      console.log(person instanceof Person); // true
+      console.log(person.dance()); // true
+      console.log(person.name === "Bob"); // true
+      console.log(!(person instanceof Ninja)); // true
+      console.log(!("wieldWeapon" in Person)); // true
+
+      var ninja = new Ninja("Yoshi", "Wakizashi");
+
+      console.log(ninja instanceof Ninja); // true
+      console.log(ninja.wieldWeapon()); // true
+      console.log(ninja instanceof Person); // true
+      console.log(ninja.name === "Yoshi"); // true
+      console.log(ninja.dance());
+    </script>
+  </body>
+</html>

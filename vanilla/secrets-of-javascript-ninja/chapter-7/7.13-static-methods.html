@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Static methods in ES6</title>
+  </head>
+  <body>
+    <script>
+      class Ninja {
+        constructor(name, level) {
+          this.name = name;
+          this.level = level;
+        }
+
+        swingSword() {
+          return true;
+        }
+
+        static compare(ninja1, ninja2) {
+          return ninja1.level - ninja2.level;
+        }
+      }
+
+      var ninja1 = new Ninja("Yoshi", 4);
+      var ninja2 = new Ninja("Hattori", 3);
+
+      console.log(!("compare" in ninja1) && !("compare" in ninja2)); // true - ninja instances don't have access to compare
+      console.log(Ninja.compare(ninja1, ninja2) > 0); // true - the class ninja has access to the compare method
+      console.log(!("swingSword" in Ninja)); // true - the class Ninja doesn't have access to the swingSword
+    </script>
+  </body>
+</html>

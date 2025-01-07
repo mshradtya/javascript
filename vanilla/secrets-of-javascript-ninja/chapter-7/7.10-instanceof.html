@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Studying the instanceof operator</title>
+  </head>
+  <body>
+    <script>
+      function Person() {}
+      function Ninja() {}
+      Ninja.prototype = new Person();
+      const ninja = new Ninja();
+
+      console.log(ninja instanceof Ninja); // true
+      console.log(ninja instanceof Person); // true
+
+      // The instanceof operator works by checking whether
+      // the current prototype of the Ninja function is in the prototype chain of the ninja instance
+    </script>
+  </body>
+</html>

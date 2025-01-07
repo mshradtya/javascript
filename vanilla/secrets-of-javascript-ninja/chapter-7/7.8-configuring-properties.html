@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Configuring properties</title>
+  </head>
+  <body>
+    <script>
+      var ninja = {};
+      ninja.name = "Yoshi"; // adding a property using assignment
+      ninja.weapon = "kusarigama"; // adding another property using assignment
+      // adding a property using property descriptor method
+      Object.defineProperty(ninja, "sneaky", {
+        configurable: false, // if true, the property’s descriptor can be changed and the property can be deleted
+        enumerable: false, // if true, the property shows up during a for-in loop over the object’s properties
+        value: true, // specifies the value of the property. Defaults to undefined.
+        writable: true, // If set to true, the property value can be changed by using an assignment.
+      });
+
+      console.log("sneaky" in ninja); // true - we can access the new property
+
+      for (let prop in ninja) {
+        console.log(prop); // "sneaky" not printed
+      }
+    </script>
+  </body>
+</html>

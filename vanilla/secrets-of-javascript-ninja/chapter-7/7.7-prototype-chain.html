@@ -5,6 +5,8 @@
   </head>
   <body>
     <script>
+      // THIS EXAMPLE IS ONLY FOR METHOD PROPERTIES
+
       function Person() {}
       Person.prototype.dance = function () {};
 
@@ -14,7 +16,7 @@
       const ninja = new Ninja();
       console.log(ninja instanceof Ninja); // true - because ninja is a Ninja
       console.log(ninja instanceof Person); // true - because now prototype of Ninja is an instance of Person
-      console.log(ninja instanceof Object); // true - because
+      console.log(ninja instanceof Object); // true - because all objects are an instance of Object
       console.log(typeof ninja.dance === "function"); // true - now ninja can access the dance method
 
       // When we try to access the dance method through the ninja object,

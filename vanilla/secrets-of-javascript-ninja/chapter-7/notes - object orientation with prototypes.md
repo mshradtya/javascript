@@ -43,3 +43,38 @@ A prototype is an object to which the search for a particular property can be de
 
 ##### configuring object properties
  
+- we can configure an object's property by using the `Object.defineProperty()` method
+
+##### finally solving the problem of overriding the constructor property
+
+- using the `Object.defineProperty()` method, we were able to solve the problem of overriding constructor property
+
+#### The instanceof operator
+
+- In JS, the `instanceof` operator works on the prototype chain of the object
+- it works by checking whether the current prototype of the Ninja function is in the prototype chain of the ninja instance
+- although its most common use is in providing a clear way to determine whether an instance was created by a particular function constructor, it doesn’t exactly work like that. Instead, it checks whether the prototype of the right-side function is in the prototype chain of the object on the left. Therefore, there is a caveat that we should be careful about.
+
+##### the instanceof caveat
+
+- since JS is a dynamic language, and the prototype of a constructor function can be changed at runtime, if we do so the `instanceof` operator will not work as expected
+
+### Using JavaScript "classes" in ES6
+
+#### using the class keyword
+
+- learnt how to create a class 
+
+#### classes are syntactic sugar
+
+- classes are just syntactic sugar for the original prototype based implementation
+
+#### static methods
+
+- static methods are those that are not accessible by the objects created by a class, but only by the class itself
+- this works because static methods are basically just a property of the class itself
+
+#### implementing inheritance
+
+- used `extends` and `super`keywords
+- `super()` is used to call the parent constructor

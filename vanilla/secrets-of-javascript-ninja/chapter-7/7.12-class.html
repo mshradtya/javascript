@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Creating a class in ES6</title>
+  </head>
+  <body>
+    <script>
+      class Ninja {
+        constructor(name) {
+          this.name = name;
+        }
+
+        swingSword() {
+          return true;
+        }
+      }
+
+      var ninja = new Ninja("Yoshi");
+      console.log(ninja instanceof Ninja); // true
+      console.log(ninja.name === "Yoshi"); // true
+      console.log(ninja.swingSword()); // true
+
+      // the above class based implementation is just a syntactic sugar
+      // for the following prototype based implementation
+
+      function Ninja(name) {
+        this.name = name;
+      }
+
+      Ninja.prototype.swingSword = function () {
+        return true;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function Person(name) {
+        this.name = name;
+        this.traits = []; // An array (reference type)
+      }
+
+      function Ninja(name, weapon) {
+        this.name = name;
+        this.weapon = weapon;
+      }
+
+      Ninja.prototype = new Person("wow");
+
+      var ninja1 = new Ninja("adm", "katana");
+      var ninja2 = new Ninja("leo", "shuriken");
+
+      ninja1.traits.push("fast");
+      console.log(ninja2.traits); // ["fast"] ❌ (unexpected shared state!)
+    </script>
+  </body>
+</html>

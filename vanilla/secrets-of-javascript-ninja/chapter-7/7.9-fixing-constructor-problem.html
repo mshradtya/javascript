@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fixing the constructor property problem</title>
+  </head>
+  <body>
+    <script>
+      function Person() {}
+      Person.prototype.dance = function () {};
+
+      function Ninja() {}
+      Ninja.prototype = new Person();
+
+      Object.defineProperty(Ninja.prototype, "constructor", {
+        enumerable: false,
+        value: Ninja,
+        writable: true,
+      });
+      var ninja = new Ninja();
+
+      console.log(ninja.constructor === Ninja); // true - as expected
+
+      for (let prop in ninja) {
+        console.log(prop); // the only innumerable property is "dance"
+      }
+    </script>
+  </body>
+</html>
