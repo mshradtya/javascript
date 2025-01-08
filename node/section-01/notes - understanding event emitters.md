@@ -1,0 +1,3 @@
+- the `events` module is written only in JS, no C++ involved and has nothing to do with the event loop or async code
+- it's just a pattern that makes your code more readable and manageable
+- whenever someone sees an `object.on()` they will know it's there to handle an event
