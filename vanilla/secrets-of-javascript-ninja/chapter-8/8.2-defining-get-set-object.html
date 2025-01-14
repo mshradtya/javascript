@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Defining getters and setters in object literals</title>
+  </head>
+  <body>
+    <script>
+      const ninjaCollection = {
+        ninjas: ["Yoshi", "Kuma", "Hattori"],
+
+        // a getter doesn't receive an argument
+        get firstNinja() {
+          return this.ninjas[0];
+        },
+
+        // a setter receives one argument ( the right side of assignment expression )
+        set firstNinja(value) {
+          this.ninjas[0] = value;
+        },
+      };
+
+      console.log(ninjaCollection.firstNinja === "Yoshi"); // true - getting using the getter
+      ninjaCollection.firstNinja = "Hachi"; // updating the first ninja using setter
+      console.log(
+        ninjaCollection.firstNinja === "Hachi" &&
+          ninjaCollection.ninjas[0] === "Hachi"
+      ); // true
+    </script>
+  </body>
+</html>

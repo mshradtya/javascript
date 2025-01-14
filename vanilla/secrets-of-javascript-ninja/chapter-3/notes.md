@@ -3,7 +3,6 @@
 - JavaScript is a functional language
 - functions in JS are first class object / citizens
 	- can be assigned to variables
-	- can be assigned to variables
 	- can be assigned as properties to other objects
 	- can be returned from other function
 	- can have dynamic properties attached to them
@@ -45,7 +44,7 @@ examples:
 
 ### 3.4 Arguments and function parameters
 
-- what are parameters vs arguments
-- number of parameters vs arguments passed
-- rest params
-- default params
+- a parameter is a variable that we list as part of a function definition.
+- an argument is a value that we pass to the function when we invoke it.
+- rest parameters enable us to reference the remaining arguments that don’t have matching parameter names.
+- default parameters enable us to specify default parameter values that will be used if no value is supplied during function invocation.

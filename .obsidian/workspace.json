@@ -4,41 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b885547fab1ba7dd",
+        "id": "092b25e81c987039",
         "type": "tabs",
-        "dimension": 70.24128686327077,
         "children": [
           {
-            "id": "b52d7dc62897fed1",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "vanilla/secrets-of-javascript-ninja/document.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "document"
-            }
-          }
-        ]
-      },
-      {
-        "id": "e273fd411bf2ad14",
-        "type": "tabs",
-        "dimension": 29.75871313672922,
-        "children": [
-          {
-            "id": "faf18a02f4e6d849",
+            "id": "7d5db19dd76926e0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vanilla/secrets-of-javascript-ninja/chapter-7/notes - object orientation with prototypes.md",
-                "mode": "source",
+                "file": "node/section-03/notes.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "notes - object orientation with prototypes"
+              "title": "notes"
             }
           }
         ]
@@ -160,10 +140,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "vanilla/secrets-of-javascript-ninja/chapter-6/notes - generators & promises.md"
+                "file": "vanilla/secrets-of-javascript-ninja/chapter-3/notes.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of notes - generators & promises"
+              "title": "Outline of notes"
             }
           }
         ],
@@ -184,26 +164,40 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "faf18a02f4e6d849",
+  "active": "7d5db19dd76926e0",
   "lastOpenFiles": [
-    "vanilla/secrets-of-javascript-ninja/document.pdf",
-    "vanilla/secrets-of-javascript-ninja/chapter-7/notes - object orientation with prototypes.md",
-    "vanilla/secrets-of-javascript-ninja/chapter-7/7.15-ceveat.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-7/7.14-inheritance-es6.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-7/7.13-static-methods.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-7/7.12-class.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-7/7.11-changes-in-prototype.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-7/7.10-instanceof.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-7/7.10-instanceof-html",
-    "vanilla/secrets-of-javascript-ninja/chapter-7/7.9-fixing-constructor-problem.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-7/7.8-configuring-properties.html",
-    "vanilla/secrets-of-javascript-ninja/chapter-3/notes.md",
+    "node/section-03/hehe.txt",
+    "node/section-03/add to the file ",
+    "node/section-03/haha.txt",
+    "node/section-03/meow.txt",
+    "node/section-03/hello.txt",
+    "node/section-03/bye.txt",
     "vanilla/secrets-of-javascript-ninja/chapter-6/notes - generators & promises.md",
+    "node/section-03/command.txt",
+    "node/section-03/02.js",
     "vanilla/secrets-of-javascript-ninja/chapter-5/notes.md",
+    "vanilla/secrets-of-javascript-ninja/chapter-4/notes.md",
+    "vanilla/secrets-of-javascript-ninja/chapter-3/notes.md",
+    "node/section-03/notes.md",
+    "new stuff learnt.md",
+    "node/section-03/text.txt",
+    "node/section-03/01.js",
+    "node/section-04/notes.md",
+    "node/section-04/01.js",
+    "node/section-02/notes - Buffers.md",
+    "attachements/Pasted image 20250111102058.png",
+    "attachements/Pasted image 20250110205709.png",
+    "attachements/Pasted image 20250110205549.png",
+    "attachements/Pasted image 20250110205546.png",
+    "attachements/Pasted image 20250110205510.png",
+    "attachements/Pasted image 20250110195825.png",
+    "attachements/Pasted image 20250110195724.png",
+    "node/section-01/notes - understanding event emitters.md",
+    "vanilla/secrets-of-javascript-ninja/chapter-8/notes - controlling access to objects.md",
+    "vanilla/secrets-of-javascript-ninja/chapter-7/notes - object orientation with prototypes.md",
     "Pasted image 20250101203944.png",
     "Pasted image 20250101203851.png",
     "Pasted image 20241219111336.png",
-    "vanilla/secrets-of-javascript-ninja/chapter-4/notes.md",
     "node/buffers/notes.md",
     "DocketRun UI Fixes.md",
     "node/event-emitter/notes.md",

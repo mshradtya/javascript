@@ -78,3 +78,14 @@ A prototype is an object to which the search for a particular property can be de
 
 - used `extends` and `super`keywords
 - `super()` is used to call the parent constructor
+
+### self discovered
+
+- defining a class in JS will lead to 3 types of properties
+	- properties outside the `constructor()` - these will be `instance properties` and will be common for all instances of that class
+	- properties inside the `constructor()` - these will also be `instance properties` and will be unique for all instances of that class
+	- method properties outside the `constructor()` - these will by default be part of the `prototype` 
+
+-  if you want to access a method from super class using `super.methodName()`, use normal function to define those methods instead of arrow function.
+- arrow functions don't have their own `this`, they take it from the scope in which they were **defined**
+- for normal functions, `this` is dynamically bound to the object that calls it

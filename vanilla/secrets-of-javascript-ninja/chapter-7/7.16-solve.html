@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function Parent(name, age) {
+        this.name = name; // Instance property
+        this.age = age; // Instance property
+        this.traits = []; // Unique per instance
+      }
+
+      // Adding a prototype method
+      Parent.prototype.greet = function () {
+        return `Hello, I am ${this.name}`;
+      };
+
+      function Child(name, age, grade) {
+        Parent.call(this, name, age); // Inherit instance properties
+        this.grade = grade; // Child-specific property
+      }
+
+      // Inherit prototype methods without executing Parent constructor
+      Child.prototype = Object.create(Parent.prototype);
+      Child.prototype.constructor = Child;
+
+      // Child-specific method
+      Child.prototype.getGrade = function () {
+        return `${this.name} is in grade ${this.grade}`;
+      };
+
+      // Creating instances
+      const c1 = new Child("Alice", 10, "5th");
+      const c2 = new Child("Bob", 12, "6th");
+
+      c1.traits.push("smart");
+
+      console.log(c1.name); // "Alice" ✅ (Inherited instance property)
+      console.log(c2.age); // 12 ✅ (Inherited instance property)
+      console.log(c1.traits); // ["smart"] ✅ (Separate per instance)
+      console.log(c2.traits); // [] ✅ (Not shared!)
+      console.log(c1.greet()); // "Hello, I am Alice" ✅ (Inherited prototype method)
+      console.log(c2.getGrade()); // "Bob is in grade 6th" ✅ (Child-specific method)
+    </script>
+  </body>
+</html>

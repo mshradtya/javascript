@@ -1,1 +1,5 @@
-{}
+{
+  "attachmentFolderPath": "attachements",
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true
+}

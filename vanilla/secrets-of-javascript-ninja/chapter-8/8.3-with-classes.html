@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Using getters and setters with ES6 classes</title>
+  </head>
+  <body>
+    <script>
+      class NinjaCollection {
+        ninjas = ["Yoshi", "Kuma", "Hattori"];
+
+        get firstNinja() {
+          return this.ninjas[0];
+        }
+
+        set firstNinja(value) {
+          this.ninjas[0] = value;
+        }
+      }
+
+      const ninjaCollection = new NinjaCollection();
+
+      console.log(ninjaCollection.firstNinja === "Yoshi"); // true - getting using the getter
+      ninjaCollection.firstNinja = "Hachi"; // updating the first ninja using setter
+      console.log(
+        ninjaCollection.firstNinja === "Hachi" &&
+          ninjaCollection.ninjas[0] === "Hachi"
+      ); // true
+      console.log(ninjaCollection.ninjas);
+    </script>
+  </body>
+</html>

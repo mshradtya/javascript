@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Using getters and setters to guard private properties</title>
+  </head>
+  <body>
+    <script>
+      function Ninja() {
+        let skillLevel;
+
+        this.getSkillLevel = () => skillLevel;
+        this.setSkillLevel = (value) => {
+          skillLevel = value;
+        };
+      }
+
+      const ninja = new Ninja();
+      ninja.setSkillLevel(100);
+      console.log(ninja.getSkillLevel() === 100); // true
+    </script>
+  </body>
+</html>
