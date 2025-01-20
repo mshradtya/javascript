@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "node/section-04/streams.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "23b9005660d3dcca",
@@ -166,7 +165,15 @@
   },
   "active": "7d5db19dd76926e0",
   "lastOpenFiles": [
+    "attachements/Pasted image 20250120181714.png",
+    "attachements/Pasted image 20250120181406.png",
+    "vanilla/secrets-of-javascript-ninja/chapter-7/notes - object orientation with prototypes.md",
+    "node/section-04/streams.md",
+    "node/section-04/src.txt",
     "node/section-04/test.txt",
+    "node/section-04/dest.txt",
+    "node/section-04/07.js",
+    "node/section-04/06.js",
     "node/section-04/05.js",
     "node/section-04/04.js",
     "attachements/Pasted image 20250115214248.png",
@@ -176,17 +183,11 @@
     "node/section-03/hehe.txt",
     "node/section-03/add to the file ",
     "node/section-03/haha.txt",
-    "node/section-03/meow.txt",
-    "node/section-03/hello.txt",
-    "node/section-03/bye.txt",
     "vanilla/secrets-of-javascript-ninja/chapter-6/notes - generators & promises.md",
-    "node/section-03/command.txt",
-    "node/section-03/02.js",
     "vanilla/secrets-of-javascript-ninja/chapter-5/notes.md",
     "vanilla/secrets-of-javascript-ninja/chapter-4/notes.md",
     "vanilla/secrets-of-javascript-ninja/chapter-3/notes.md",
     "new stuff learnt.md",
-    "node/section-04/streams.md",
     "node/section-02/notes - Buffers.md",
     "attachements/Pasted image 20250111102058.png",
     "attachements/Pasted image 20250110205709.png",
@@ -194,10 +195,8 @@
     "attachements/Pasted image 20250110205546.png",
     "attachements/Pasted image 20250110205510.png",
     "attachements/Pasted image 20250110195825.png",
-    "attachements/Pasted image 20250110195724.png",
     "node/section-01/notes - understanding event emitters.md",
     "vanilla/secrets-of-javascript-ninja/chapter-8/notes - controlling access to objects.md",
-    "vanilla/secrets-of-javascript-ninja/chapter-7/notes - object orientation with prototypes.md",
     "node/buffers/notes.md",
     "DocketRun UI Fixes.md",
     "node/event-emitter/notes.md",

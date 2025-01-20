@@ -29,3 +29,17 @@ looking back at our loop code, we were writing into our file a million times sep
 
 - to write a huge amount of data using a writable stream, you should actually first create a readable stream, as a result you'll get a small chunk of the huge data, which you can then push to the writable stream and then write the data to the destination, this way the writable stream will not hold on to the huge data in the memory.
 
+### duplex stream
+
+![](Pasted%20image%2020250120181406.png)
+
+- duplex has both a readable internal buffer and a writable internal buffer
+- they're not connected in any way
+- you can use them independently. you could be reading from a file and writing into the network card
+- the module that uses this stream is the `net` module in the TCP sockets.
+
+### transform stream
+
+![](Pasted%20image%2020250120181714.png)
+
+- if a duplex stream using writing using the writable buffer and then sending it into the readable internal buffer, it becomes a transform stream
