@@ -12,7 +12,7 @@ const { performance } = require("node:perf_hooks");
   console.time("writing");
 
   let i = 0;
-  const LIMIT = 100000;
+  const LIMIT = 100000000;
   const bytesToBeWritten = calculateTotalBytesToWrite();
   const stream = fs.createWriteStream("./file.txt");
 
